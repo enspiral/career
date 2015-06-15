@@ -1,0 +1,36 @@
+Instraction Back-end:
+
+1. Go:  localhost:3000/admin
+      login info:
+        email: amdin@example.com
+        password: password
+
+2. downloads email as cvs/json/xml
+
+
+
+rails commands :
+
+>rails g model career full_name email phone_number attachment
+
+>rails g model feedback email_address
+
+set carrierwave
+mount_uploader :attachment, AttachmentUploader
+
+>rails generate uploader Attachment
+
+  def extension_white_list
+    %w(pdf doc htm html docx)
+  end
+
+
+>rails g controller Home index about
+
+>rails g controller Careers index cv new ruby ruby_f postgress postgress_f director director_f sme sme_f consumer consumer_f
+
+  > rails g active_admin:install
+  >rake db:migrate
+  >rails g active_admin:resource send
+  >rails g active_admin:resource feedback
+  >rails g active_admin:resource career

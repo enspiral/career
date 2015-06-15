@@ -1,0 +1,19 @@
+             Prefix Verb   URI Pattern                    Controller#Action
+       ruby_careers GET    /careers/ruby(.:format)        careers#ruby
+     ruby_f_careers GET    /careers/ruby_f(.:format)      careers#ruby_f
+  postgress_careers GET    /careers/postgress(.:format)   careers#postgress
+postgress_f_careers GET    /careers/postgress_f(.:format) careers#postgress_f
+   director_careers GET    /careers/director(.:format)    careers#director
+ director_f_careers GET    /careers/director_f(.:format)  careers#director_f
+        sme_careers GET    /careers/sme(.:format)         careers#sme
+      sme_f_careers GET    /careers/sme_f(.:format)       careers#sme_f
+   consumer_careers GET    /careers/consumer(.:format)    careers#consumer
+ consumer_f_careers GET    /careers/consumer_f(.:format)  careers#consumer_f
+            careers GET    /careers(.:format)             careers#index
+                    POST   /careers(.:format)             careers#create
+         new_career GET    /careers/new(.:format)         careers#new
+        edit_career GET    /careers/:id/edit(.:format)    careers#edit
+             career GET    /careers/:id(.:format)         careers#show
+                    PATCH  /careers/:id(.:format)         careers#update
+                    PUT    /careers/:id(.:format)         careers#update
+                    DELETE /careers/:id(.:format)         careers#destroy

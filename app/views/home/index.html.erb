@@ -1,0 +1,142 @@
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="header_area">
+  <div class="header structure fix">
+    <div class="header_top">
+      <div class="header_top_left floatleft">
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "About us", home_about_path %></li>
+          <li><%= link_to "Careers", careers_path %></li>
+        </ul>
+      </div>
+      <div class="header_top_right floatright">
+        <button type="button" class="headertop_button"><%= link_to "Now Hiring", careers_path , class: "color_hire" %></li></button>
+      </div>
+    </div>
+
+    <div class="header_bottom">
+      <%= image_tag "logo.png", alt: "" %>
+      <% # video_tag "myvideo.mp4", width: "640", height: "480", poster: "myvideo.jpg", controls: true %>
+      <% # i use image in css file you need to add gif/video there  %>
+
+    </div>
+    <h1 class="launch">Launching soon</h1>
+
+    <div class="newsletter_singup_form header_submit">
+      <%= render :template => "feedbacks/new", :locals => { :feedback => Feedback.new} %>
+    </div>
+
+    <div class="newsletter_bottom">
+      <p>Why use homes.co.nz?</p>
+      <%= image_tag "down.png", alt: "" %>
+    </div>
+  </div>
+</div>
+
+<div class="portfolio_area fix">
+  <div class="portfolio structure fix">
+    <div class="portfolio_text fix">
+      <h1>Explore every home in New Zealand</h1>
+      <p>On or off the market you can find information on every home in New Zealand right here.</p>
+    </div>
+
+    <div class="portfolio_1 fix">
+      <div class="auckland floatleft">
+        <%= image_tag "auckland.png", alt: "" %> <h2>Auckland</h2>
+      </div>
+      
+      <div class="queenstown floatright">
+        <%= image_tag "queenstown.png", alt: "" %> <h2>Queenstown</h2>
+      </div>
+      
+
+    </div>
+    <div class="portfolio_2 fix">
+
+      <div class="wellington floatleft">
+        <%= image_tag "wellington.png", alt: "" %> <h2>Wellington</h2>
+      </div>
+      <div class="nelson floatleft">
+        <%= image_tag "nelson.png", alt: "" %> <h2>Nelson</h2>
+      </div>
+      <div class="tauranga floatright">
+        <%= image_tag "tauranga.png", alt: "" %> <h2>Tauranga</h2>
+      </div>
+
+    </div>
+    <div class="portfolio_3 fix">
+
+      <div class="dunedin floatleft">
+        <%= image_tag "dunedin.png", alt: "" %> <h2>Dunedin</h2>
+      </div>
+      <div class="christchurch floatright">
+        <%= image_tag "christchurch.png", alt: "" %> <h2>Christchurch</h2>
+      </div>
+      
+      
+    </div>
+
+  </div>
+</div>
+
+<div class="map_area fix">
+  <div class="map structure fix">
+
+    <div class="map_text">
+      <h2>Discover free home values </h2>
+      <p>Uncover the estimated value of your next property or your own home with our free e-values.</p>
+    </div>
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1500.955520285872!2d174.8785817!3d-41.201913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38ab0c98820e0d%3A0x7052757083cf588!2sWattle+Grove%2C+Maungaraki%2C+Lower+Hutt+5010%2C+New+Zealand!5e0!3m2!1sen!2sbd!4v1434398427964" width="1280" height="420" frameborder="0" style="border:0"></iframe>
+  </div>
+</div>
+
+<div class="message_area fix">
+  <div class="message structure fix">
+    <h1>Claim and manage your home</h1>
+    <p>Start new home improvement projects, manage your home finances, view a timeline of your homes history and more.</p>
+
+    <%= image_tag "ipad.png", alt: "" %>
+
+  </div>
+</div>
+
+<div class="launching_area fix">
+  <div class="launching structure fix">
+    <h1>Launching soon</h1>
+
+    <div class="newsletter_singup_form">
+      <%= render :template => "feedbacks/new", :locals => { :feedback => Feedback.new} %>
+    </div>
+  </div>
+</div>
+
+<div class="fotter_area fix">
+  <div class="fotter structure fix">
+    <div class="company floatleft">
+      <p>company</p>
+      <ul>
+        <li><%= link_to "About us", home_about_path %></li>
+        <li><%= link_to "Careers",careers_path %></li>
+        <li><%= link_to "Terms & Privacy", home_policy_path, target: '_blank' %></li>
+      </ul>
+    </div>
+    <div class="find_our_online floatleft">
+      <p>FIND US ONLINE</p>
+      <ul>
+        <li><%= link_to "Facebook", "http://www.facebook.com/homes.co.nz" %></li>
+        <li><%= link_to "Twitter", "http://www.twitter.com/HomesNZ" %></li>
+      </ul>
+    </div>
+    <div class="company_logo floatleft">
+
+      <%= image_tag "footer_logo.png", :alt => "" %>
+      <p>&copy; 2015 PropertyNZ Ltd</p>
+    </div>
+  </div>
+</div>
+

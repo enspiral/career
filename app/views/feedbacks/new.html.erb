@@ -1,0 +1,15 @@
+<%= form_for(feedback) do |f| %>
+    <% if feedback.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+            <% feedback.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+      <%= f.text_field :email_address,  :placeholder => "Enter your email address to stay updated on our launch" %>
+      <%= f.submit "Go" %>
+
+<% end %>

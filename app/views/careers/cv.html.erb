@@ -1,0 +1,26 @@
+
+
+<div  style="margin-left: 30%; margin-top: 10%; margin-right: 30%">
+<h1>All contact details</h1>
+
+<table class="table table-hover" >
+  <thead>
+  <tr>
+    <th > Name</th>
+    <th>Attachment</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @careers.each do |career| %>
+      <tr>
+        <td><%= career.full_name %></td>
+
+        <td><%= link_to "Download Resume", career.attachment_url %></td>
+
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>

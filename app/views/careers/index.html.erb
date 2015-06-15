@@ -1,0 +1,118 @@
+
+
+
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="header_area">
+  <div class="careers structure fix">
+    <div class="header_top fix">
+      <div class="header_top_left floatleft fix">
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "About us", home_about_path %></li>
+          <li><%= link_to "Careers", careers_path %></li>
+        </ul>
+      </div>
+      <div class="header_top_right floatright">
+        <button type="button" class="headertop_button"><%= link_to "Now Hiring", careers_path , class: "color_hire" %></button>
+      </div>
+    </div>
+
+    <h2>Careers</h2>
+  </div>
+</div>
+
+<div class="position_area fix">
+  <div class="position structure fix">
+    <h2>Positions you can apply for today</h2>
+    <div class="single_position">
+      <h4>Ruby on Rails Developer</h4>
+      <p>Development</p>
+      <p>Full-time, Wellingtom</p>
+
+      <%= link_to "APPLY NOW", ruby_careers_path %>
+    </div>
+
+    <div class="single_position">
+      <h4>Product manager -consumer</h4>
+      <p>Development</p>
+      <p>Full-time, Wellingtom</p>
+
+      <%= link_to "APPLY NOW", consumer_careers_path %>
+
+    </div>
+
+
+    <div class="single_position">
+      <h4>Senior PostgresSQL DBA</h4>
+      <p>Development</p>
+      <p>Full-time, Wellingtom</p>
+
+      <%= link_to "APPLY NOW", postgress_careers_path %>
+    </div>
+
+    <div class="single_position">
+      <h4>Operations Derectors</h4>
+      <p>Development</p>
+      <p>Full-time, Wellingtom</p>
+
+      <%= link_to "APPLY NOW", director_careers_path %>
+    </div>
+
+    <div class="single_position">
+      <h4>Product manager -sme</h4>
+      <p>Development</p>
+      <p>Full-time, Wellingtom</p>
+
+      <%= link_to "APPLY NOW", sme_careers_path %>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="get_in_touch_area fix">
+  <div class="get_in_touch structure fix">
+    <h2>Get in touch</h2>
+
+    <div class="send_bottom floatleft fix">
+      <%= render :template => "sends/new", :locals => { :send => Send.new} %>
+
+    </div>
+    <div class="map_bottom floatright fix">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.387885396125!2d174.89920669999998!3d-41.213316899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38aa53580b470d%3A0x735f4f179d9c00b!2s4+Market+Grove%2C+Lower+Hutt+5010%2C+New+Zealand!5e0!3m2!1sen!2sbd!4v1434401549840" width="436" height="317" frameborder="0" style="border:0"></iframe>
+      <p>Address</p>
+      <p>4 Market Grove, Lower Hutt, Wellington, 5010</p>
+    </div>
+  </div>
+</div>
+
+<div class="fotter_area fix">
+  <div class="fotter structure fix">
+    <div class="company floatleft">
+      <p>company</p>
+      <ul>
+        <li><%= link_to "About us", home_about_path %></li>
+        <li><%= link_to "Careers",careers_path %></li>
+        <li><%= link_to "Terms & Privacy", home_policy_path, target: '_blank' %></li>
+
+      </ul>
+    </div>
+    <div class="find_our_online floatleft">
+      <p>FIND US ONLINE</p>
+      <ul>
+        <li><%= link_to "Facebook", "http://www.facebook.com/homes.co.nz" %></li>
+        <li><%= link_to "Twitter", "http://www.twitter.com/HomesNZ" %></li>
+      </ul>
+    </div>
+    <div class="company_logo floatleft">
+      <%= image_tag "footer_logo.png" %>
+      <p>&copy; 2015 PropertyNZ Ltd</p>
+    </div>
+  </div>
+</div>
+

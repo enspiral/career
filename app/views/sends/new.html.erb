@@ -1,0 +1,20 @@
+
+<%= form_for(send, html: { multipart: true } ) do |f| %>
+
+
+
+      <%= f.text_field :full_name,  :placeholder => "Full Name" %>
+      <%= f.text_field :email, :placeholder => "Email Address" %>
+      <%= f.text_area :messages, :placeholder => "Your Message" , class: "send_bottom_message" %>
+      <%= f.submit "SEND" %>
+
+<% end %>
+<% if send.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% send.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

@@ -1,0 +1,49 @@
+<div class="submit_area fix">
+  <div class="submit structure fix">
+    <div class="submit_title fix">
+      <h2><%= @head_name || "Please Fill The Form Properly" %></h2>
+
+      <p><%= @place %> </p>
+    </div>
+
+    <%= form_for(career, html: { multipart: true } ) do |f| %>
+    <div class="submit_top fix">
+      <div class="submit_left floatleft fix">
+        <h4>Your Contact Cetails</h4>
+
+          <h6>Full Name *</h6>
+        <input type="text" name="career[full_name]" id="career_full_name" />
+
+        <h6>Email *</h6>
+        <input type="text" name="career[email]" id="career_email" />
+
+        <h6>Phone Number *</h6>
+        <input type="text" name="career[phone_number]" id="career_phone_number" />
+      </div>
+      <div class="submit_right floatleft fix">
+        <h4>Upload Your CV</h4>
+        <span class="btn btn-default btn-file">ATTACH RESUME/CV <input type="file" name="career[attachment]" id="career_attachment" /></span>
+      </div>
+    </div>
+    <div class="submit_bottom fix">
+      <input type="submit" name="commit" value="SUBMIT APPLICATION"  />
+    </div>
+    <% end %>
+
+
+    <% if career.errors.any? %>
+        <div class= "submit_error_area fix">
+          <ul>
+            <% career.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= link_to "Go back to careers page", careers_path %>
+  </div>
+</div>
+
+
+
