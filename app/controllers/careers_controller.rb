@@ -35,6 +35,13 @@ class CareersController < ApplicationController
   def ruby_f
   end
 
+
+  def engineer
+  end
+
+  def engineer_f
+  end
+
   def postgress
   end
 

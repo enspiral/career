@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
       get 'ruby_f'
 
+      get 'engineer'
+
+      get 'engineer_f'
+
       get 'postgress'
 
       get 'postgress_f'
