@@ -17,8 +17,8 @@ img{border:none;max-width:100%;height:auto}
 .structure{width: 100%;margin:0 auto;display:block;}
 
 
-.header_area{}
-.header{background-image: image-url('resized.jpg');background-position:center center;background-color: #464646; opacity: 0.6 ;background-size:cover;min-height:620px;width: 100%;margin: 0 auto }
+.header_area{ }
+.header{background-image: image-url('resize.jpg');background-position:center center;background-size:cover;min-height:620px;width: 100%;margin: 0 auto;}
 .header_top{}
 .header_top_left{}
 .header_top_left ul{margin: 0;padding: 0;list-style: none}
@@ -29,7 +29,7 @@ img{border:none;max-width:100%;height:auto}
 .btn-default{}
 .headertop_button{background: rgba(0, 0, 0, 0) none repeat scroll 0 0;border: 1px solid #fff;border-radius: 5px;color: #fff;margin-top: 18px;padding: 12px 55px;text-transform: uppercase;}
 .headertop_button:hover{  }
-.header_bottom{padding: 0 540px;}
+.header_bottom{padding: 0 540px; }
 .header_bottom img{margin-left: 1px;margin-top: 160px; }
 .header_bottom h1{color: #ffffff ;text-align: center; font-size: 30px;font-family: 'Open Sans', sans-serif }
 .header_bottom p{color: #DDDADA;text-align: center;}
@@ -42,7 +42,7 @@ img{border:none;max-width:100%;height:auto}
 .portfolio_area{}
 .portfolio{padding: 100px 200px;}
 .portfolio_text{margin-bottom: 64px}
-.portfolio_1, .portfolio_2, portfolio_3{width: 940px}
+.portfolio_1, .portfolio_2, .portfolio_3 {width: 940px}
 .portfolio_1{}
 .auckland h2{position: absolute;margin-top: -166px;margin-left: 238px;font-size: 26px;color: #fff;}
 .queenstown h2{position: absolute;margin-top: -166px;margin-left: 72px;font-size: 26px;color: #fff;}
