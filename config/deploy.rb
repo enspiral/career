@@ -35,17 +35,15 @@ end
 
 namespace :site do
   task :symlink do
-    run "ln -nfs #{shared_path}/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
 end
 
 namespace :deploy do
   desc 'Restart application'
   task :restart do
-    run "cd #{release_path} && RAILS_ENV=#{rails_env} bundle exec rake chewy:reset:all"
     run "mkdir -p #{release_path}/tmp"
     run "touch #{release_path}/tmp/restart.txt"
-    run "touch #{release_path}/tmp/restart-sidekiq.txt"
   end
 end
 
