@@ -15,9 +15,7 @@
 /log/*
 !/log/.keep
 /tmp
-<<<<<<< HEAD
 
-=======
 config/database.yml
 .idea
->>>>>>> a6dca8f6d7c02b4e3a8a90286a6d6f469a4a6f4f
+
