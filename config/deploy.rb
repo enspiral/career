@@ -19,11 +19,16 @@ task :production do
   set :ssh_options, {forward_agent: true}
 
   server "atlantic.pnz.enspiral.info", :web, :app
-  # server "pacific.pnz.enspiral.info", :web, :app
+  server "pacific.pnz.enspiral.info", :web, :app, :db, {primary: true}
   # server "indian.pnz.enspiral.info", :db, {primary: true}
 end
 
 namespace :assets do
+  task :setup_manifest, :roles => :web do
+    run "mkdir -p #{shared_path}/assets"
+    run "touch #{shared_path}/assets/manifest.yml"
+  end
+
   task :precompile, :roles => :web do
     run "cd #{release_path} && RAILS_ENV=#{rails_env} bundle exec rake assets:precompile"
   end
@@ -52,6 +57,5 @@ require "bundler/capistrano"
 
 after "deploy:restart", "deploy:cleanup"
 after "deploy:finalize_update", "site:symlink"
-
 
 require './config/boot'
